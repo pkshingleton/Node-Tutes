@@ -1,0 +1,62 @@
+
+
+/*---------------| DOCUMENT |-----------------*/
+body {background:rgb(27, 27, 27); line-height:2rem; margin-top:1rem; }
+
+p, a {font-family: 'Courier New', Courier, monospace; text-align: left; color:gray;margin:2rem 5rem;}
+
+h1, h4, label { font-family: 'Courier New', Courier, monospace; text-align:center;}
+
+ul {list-style: none; margin-top:-1rem;color:gray; margin-bottom:3rem;}
+
+
+/*---------------| NAV |-----------------*/
+nav {text-align:center;}
+
+nav ul {
+    list-style: none;
+    display:inline-flex;
+    font-weight:bold;
+}
+
+li {padding-left:5rem;}
+
+nav>ul>li {padding:0rem;}
+
+nav>ul>li>a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#444344;
+}
+
+li>a:hover {
+    color:#ffffff !important;
+}
+
+nav>ul>li>a:visited {
+    color:#444344;
+}
+
+/*---------------| FORMS |-----------------*/
+input {
+    font-family:'Courier New';
+    padding:.5rem 1.5rem;
+    margin:1rem; 
+    background:#252525; 
+    color:#2bff00;
+    font-weight: bold;
+    outline: none;
+    border:none;
+    border-bottom:1px solid #2bff00;
+}
+
+label {color:#cccccc; font-size:12px;}
+
+.form {
+    display:flex;
+    width:100%; 
+    justify-content: center; 
+    align-items: center;
+    text-align:end;
+}
+

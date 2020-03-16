@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/style.css">
+    </head>
+    <body>
+
+        <!--[ PARTIAL - Nav ]-->
+        <%- include ('nav.ejs')  %> 
+
+        <h1 style="color:#2bff00; text-shadow: 2px 2px 2px #ff19ff">\\ CONTACT THE MAINFRAME. |</h1>
+        <h4 style="color:#ffffff; text-shadow: 2px 2px 8px #19d1ff;"> 127.0.0.1:1337 </h4>
+        <br>
+        <div class="form">
+            <form action="">
+                <div>
+                    <label for="who">Enter name \\ </label>
+                    <input name="who" type="text" />
+                </div>
+                <div>
+                    <label for="where">Enter department \\ </label>
+                    <input name="where" type="text" />
+                </div>
+            </form>
+        </div>
+        <p>
+            <strong style="color:#0e5201">></strong>
+            Query detected... 
+        </p>
+        <p>
+            <strong style="color:#2bff00">></strong>
+            Looking for '<strong style="color:white"><%= qs.person %></strong>' in '<strong style="color:white"><%= qs.dept %></strong>'
+        </p>
+        <br> 
+    </body>
+</html>
