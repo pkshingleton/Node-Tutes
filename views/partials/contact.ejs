@@ -8,29 +8,31 @@
         <!--[ PARTIAL - Nav ]-->
         <%- include ('nav.ejs')  %> 
 
-        <h1 style="color:#2bff00; text-shadow: 2px 2px 2px #ff19ff">\\ CONTACT THE MAINFRAME. |</h1>
-        <h4 style="color:#ffffff; text-shadow: 2px 2px 8px #19d1ff;"> 127.0.0.1:1337 </h4>
         <br>
+
         <div class="form">
-            <form action="">
+
+            <!--| FORM - POST |-->
+            <form id="message-user" method="POST" action="/contact">
                 <div>
-                    <label for="who">Enter name \\ </label>
-                    <input name="who" type="text" />
+                    <label for="who">Target userame \\ </label>
+                    <input name="who" type="text" class="glow-text" autocomplete="off"/>
                 </div>
-                <div>
-                    <label for="where">Enter department \\ </label>
-                    <input name="where" type="text" />
+                <div id="message-input">
+                    <label for="what">Message \\ </label>
+                    <input name="what" type="text-area" class="glow-text" autocomplete="off"/>
                 </div>
+                <button>SEND >> </button>
             </form>
+
         </div>
+
+        <br>
+
         <p>
-            <strong style="color:#0e5201">></strong>
-            Query detected... 
-        </p>
-        <p>
-            <strong style="color:#2bff00">></strong>
-            Looking for '<strong style="color:white"><%= qs.person %></strong>' in '<strong style="color:white"><%= qs.dept %></strong>'
-        </p>
-        <br> 
+            <strong style="color:#2bff00" class="glow-text">></strong>
+            Communication channel open... 
+        </p> 
+        
     </body>
 </html>

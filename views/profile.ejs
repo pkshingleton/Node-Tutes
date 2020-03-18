@@ -9,33 +9,37 @@
         <!--[ PARTIAL - Nav ]-->
         <%- include ('partials/nav.ejs')  %> 
 
-        <h1 style="color:#2bff00; text-shadow: 2px 2px 2px #ff19ff">\\ PROFILE: [ <%= person %> ]</h1>
+        <h1 style="color:#2bff00" class="text-glow">\\ PROFILE: [ <%= person %> ]</h1>
         <h4 style="color:#ffffff; text-shadow: 2px 2px 8px #19d1ff;"> STATUS :: AUTHORIZED </h4>
+        
         <p style="padding-top:3rem;">
-            <strong style="color:#2bff00">></strong>
+            <strong style="color:#0e5201">></strong>
             <strong style="color:white">Age: </strong><%= data.age %>
             <strong style="color:white">Occupation: </strong><%= data.occupation %>
             <strong style="color:white">Status: </strong><%= data.status %> 
-        </p> 
+        </p>
+
         <p>
-            <strong style="color:#2bff00">></strong>
+            <strong style="color:#0e5201">></strong>
             <strong style="color:white">Equipment: </strong>
-            
-            <ul>
-                <!--[ LOOP ARRAY ]-->
+
+            <ul id="user-bio">
+                <!----[ LOOP ARRAY ]---->
                 <% data.equip.forEach(item => { %>
 
-                    <!--| ARRAY ITEMS |-->
+                    <!----| ARRAY ITEMS |---->
                     <li>[ <%= item.qty %>x ]  <%= item.name %></li>
 
                 <% }); %>
             </ul>
         </p>
+
         <p>
-            <strong style="color:#2bff00">></strong>
+            <strong style="color:#2bff00" class="glow-text">></strong>
             <strong style="color:white">Report: </strong>
             The hacker alias <%= person %>'s whereabouts are currently unknown. Further information is pending review.
         </p>
+
     </body>
 </html>
 

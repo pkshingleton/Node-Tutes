@@ -1,14 +1,15 @@
 
 
 /*---------------| DOCUMENT |-----------------*/
-body {background:rgb(27, 27, 27); line-height:2rem; margin-top:1rem; }
+body {background:#1b1b1b; line-height:2rem; margin-top:1rem; }
 
-p, a {font-family: 'Courier New', Courier, monospace; text-align: left; color:gray;margin:2rem 5rem;}
+p, a {font-family: 'Courier New', Courier, monospace; text-align: center; color:gray;margin:2rem 5rem;}
 
-h1, h4, label { font-family: 'Courier New', Courier, monospace; text-align:center;}
+h1, h4, label, button {font-family: 'Courier New', Courier, monospace; text-align:center;}
 
 ul {list-style: none; margin-top:-1rem;color:gray; margin-bottom:3rem;}
 
+.glow-text {text-shadow: 0px 0px 25px #2bff00;}
 
 /*---------------| NAV |-----------------*/
 nav {text-align:center;}
@@ -17,6 +18,7 @@ nav ul {
     list-style: none;
     display:inline-flex;
     font-weight:bold;
+    padding:0;
 }
 
 li {padding-left:5rem;}
@@ -37,13 +39,14 @@ nav>ul>li>a:visited {
     color:#444344;
 }
 
+
 /*---------------| FORMS |-----------------*/
 input {
     font-family:'Courier New';
     padding:.5rem 1.5rem;
     margin:1rem; 
     background:#252525; 
-    color:#2bff00;
+    color:#aeff62;
     font-weight: bold;
     outline: none;
     border:none;
@@ -59,4 +62,32 @@ label {color:#cccccc; font-size:12px;}
     align-items: center;
     text-align:end;
 }
+
+
+/*---------------| BUTTON |-----------------*/
+button {
+    padding:10px 20px;
+    margin-top:1rem;
+    border-radius:3px;
+    background:#1b1b1b;
+    border: none;
+    color: #2bff00;
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+    font-size:16px;
+    font-weight:bold;
+}
+
+button:hover {
+    text-shadow: 0px 0px 25px #2bff00;
+    color:#aeff62;
+}
+
+
+
+#user-bio {
+    text-align:center;
+}
+#user-bio li,
+#user-bio {  padding:0; }
 

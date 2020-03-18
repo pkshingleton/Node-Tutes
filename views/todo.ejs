@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Tod0 - Dark</title>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+        <link href="../assets/style.css" type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <main id="app">
+            <div id="todo-table">
+
+                <form method="POST" action="/todo" id="item">
+                    <label for="item" class="glow-text">></label>
+                    <input 
+                        type="text" 
+                        name="item" 
+                        placeholder="Add new item..." 
+                        autocomplete="off" 
+                        required 
+                        autofocus
+                        >
+                    <button type="submit">+ Add Item</button>
+                </form>
+
+                <hr>
+
+                <ul id="todo-list">
+                    <!--| LOOP - ARRAY |-->
+                    <% todos.forEach(el => { %>
+                        <li class="card">
+                            <p><%= el.item %></p>
+                        </li>
+                    <% }) %>
+                </ul>
+
+                <hr>
+
+            </div>
+        </main>
+        
+        <script>
+            $('.card').on('click', (e) =>{
+                //-- Grab inner text and store it as a hyphenated string
+                let item = $(e.target).children('p').text().replace(/ /g, '-')
+                //-- Sends server 'delete' request via AJAX, then reloads page with returned data
+                $.ajax({
+                    type: 'DELETE',
+                    url: `/todo/${item}`,
+                    success: data => location.reload()
+                })
+            })
+        </script>
+
+    </body>
+</html>

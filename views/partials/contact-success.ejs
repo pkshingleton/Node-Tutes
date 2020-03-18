@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/style.css">
+    </head>
+    <body>
+
+        <!--[ PARTIAL - Nav ]-->
+        <%- include ('nav.ejs')  %> 
+
+        <h1 style="color:#2bff00" class="text-glow">\\ SUCCESS. </h1>
+        <h4 style="color:#ffffff; text-shadow: 2px 2px 8px #19d1ff;"> MESSAGE >> SENT </h4>
+
+        <br><br><br>
+    
+        <p>
+            <strong style="color:#0e5201">></strong>
+            Communication channel closed. 
+        </p>
+
+        <p>
+            <strong style="color:#2bff00" class="glow-text">></strong>
+            Sent '<strong style="color:white"><%= qs.who %></strong>' message: '<strong style="color:white"><%= qs.what %></strong>'
+        </p>
+        
+        <br>
+
+    </body>
+</html>
