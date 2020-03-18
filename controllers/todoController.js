@@ -20,7 +20,7 @@ const urlencodedParser = bodyParser.urlencoded({extended:false})
 
 //-- References the Express app object (aka the entry-point) 
 //   Specifically this will handle GET and POST requests and serve the responses
-//   (And relay status with using my exquisite totally necessary custom console logger)
+//   (And relay status with my exquisite totally necessary custom console logger)
 module.exports = function(app){
 
     //--------------| GET |--------------
