@@ -2,6 +2,7 @@
 
 //-- Import some middleware magic
 const bodyParser = require('body-parser')
+//-- My custom console log, for fun
 const myLog = require('../myLog')
 
 //-- Static data for tutorial pruposes. Ideally this gets fetched from a database, parsed JSON, etc. 
