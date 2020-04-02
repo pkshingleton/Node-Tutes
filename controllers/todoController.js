@@ -6,11 +6,7 @@ const bodyParser = require('body-parser')
 const myLog = require('../myLog')
 
 //-- Static data for tutorial pruposes. Ideally this gets fetched from a database, parsed JSON, etc. 
-let dummyData = [
-    {item: 'Fix dashboard performance bugs'},
-    {item: 'Find more Node tutes'},
-    {item: 'Add Samsara data to dashboard'},
-]
+let dummyData = []
 
 //-- Assign imported 'bodyParser' module to use in POST requests
 const urlencodedParser = bodyParser.urlencoded({extended:false})
@@ -23,7 +19,6 @@ const urlencodedParser = bodyParser.urlencoded({extended:false})
 //   Specifically this will handle GET and POST requests and serve the responses
 //   (And relay status with my exquisite totally necessary custom console logger)
 module.exports = function(app){
-
     //--------------| GET |--------------
     //-- When client initiates GET request to '/todo'
     app.get('/todo', (req, res) => {
@@ -34,8 +29,6 @@ module.exports = function(app){
         //-- Log response
         myLog.resLog(res)
     })
-
-
     //--------------| POST |--------------
     //-- When client initiates POST request to '/todo'
     app.post('/todo', urlencodedParser, (req, res) => {
@@ -49,8 +42,6 @@ module.exports = function(app){
         //-- Log response
         myLog.resLog(res)
     })
-
-
     //--------------| DELETE |--------------
     //-- When client initiates DELETE request to '/todo'
     app.delete('/todo/:item', (req, res) => {
